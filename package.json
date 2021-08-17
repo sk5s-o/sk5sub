@@ -1,0 +1,61 @@
+{
+  "name": "sk5sub",
+  "version": "1.0.0",
+  "description": "A desktop app let you make SRT caption Fast!!!! forked in 2021 from wiwikuan / fast-srt-subtitle",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sk5s/sk5sub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sk5s/sk5sub/issues"
+  },
+  "homepage": "https://github.com/sk5s/sk5sub#readme",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.59",
+    "@electron-forge/maker-deb": "^6.0.0-beta.59",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.59",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.59",
+    "@electron-forge/maker-zip": "^6.0.0-beta.59",
+    "electron": "^13.1.9"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "sk5sub"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
